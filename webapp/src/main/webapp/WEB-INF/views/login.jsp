@@ -42,7 +42,7 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="/login.do">Login</a></li>
-				<li><a href="/login.do">SignUp</a></li>
+				<li><a href="/signup.do">SignUp</a></li>
 			</ul>
 		</div>
 

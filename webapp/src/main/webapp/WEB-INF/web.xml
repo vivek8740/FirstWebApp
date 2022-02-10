@@ -4,6 +4,6 @@
 	version="3.0">
 	<display-name>To do List</display-name>
 	<welcome-file-list>
-		<welcome-file>login.do</welcome-file>
+		<welcome-file>welcome.do</welcome-file>
 	</welcome-file-list>
 </web-app>

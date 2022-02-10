@@ -41,7 +41,7 @@
 				<li><a href="http://www.google.com">Oracle</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/before-Login.do">Login</a></li>
+				<li><a href="/before-login.do">Login</a></li>
 				<li><a href="/signup.do">SignUp</a></li>
 			</ul>
 		</div>

@@ -22,22 +22,4 @@ public class WelcomeServlet extends HttpServlet {
 			throws IOException, ServletException {
 		request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);
 	}
-
-	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws IOException, ServletException {
-		String name = request.getParameter("name");
-		String password = request.getParameter("password");
-
-		boolean isValidUser = service.validateUser(name, password);
-
-		if (isValidUser) {
-			request.getSession().setAttribute("name", name);
-			response.sendRedirect("/todo.do");
-		} else {
-			request.setAttribute("errorMessage", "Invalid Credentials!!");
-			request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
-		}
-	}
-
 }
