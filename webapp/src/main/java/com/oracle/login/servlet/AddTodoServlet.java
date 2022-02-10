@@ -8,17 +8,25 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.oracle.model.Todo;
 import com.oracle.service.TodoService;
 
-@WebServlet(urlPatterns = "/list-todo.do")
-public class ListTodoServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/add-todo.do")
+public class AddTodoServlet extends HttpServlet {
 
 	private TodoService todoService = new TodoService();
 
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		request.setAttribute("todos", todoService.retrieveTodos());
-		request.getRequestDispatcher("/WEB-INF/views/util/list-todo.jsp").forward(
+		request.getRequestDispatcher("/WEB-INF/views/util/add-todo.jsp").forward(
 				request, response);
+	}
+
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		String newTodo = request.getParameter("todo");
+		String category = request.getParameter("category");
+		todoService.addTodo(new Todo(newTodo, category));
+		response.sendRedirect("/list-todo.do");
 	}
 }

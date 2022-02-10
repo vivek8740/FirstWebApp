@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title>Login</title>
+<title>Welcome</title>
 <!-- Bootstrap core CSS -->
 <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -37,26 +37,18 @@
 		<div class="navbar-collapse">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#">Home</a></li>
-				<li><a href="/todo.do">Todos</a></li>
+				<li><a href="/list-todo.do">Todos</a></li>
 				<li><a href="http://www.google.com">Oracle</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/login.do">Login</a></li>
+				<li><a href="/before-login.do">Login</a></li>
 				<li><a href="/signup.do">SignUp</a></li>
 			</ul>
 		</div>
 
 	</nav>
 
-	<div class="container">
-		<p>
-			<font color="red">${errorMessage}</font>
-		</p>
-		<form action="/login.do" method="POST">
-			Name : <input name="name" type="text" /> Password : <input
-				name="password" type="password" /> <input type="submit" />
-		</form>
-	</div>
+	<div class="container"></div>
 
 	<footer class="footer">
 		<div class="container">

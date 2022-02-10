@@ -9,8 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.oracle.model.Todo;
 import com.oracle.service.TodoService;
-@WebServlet(urlPatterns = "/deletetodo.do")
+@WebServlet(urlPatterns = "/delete-todo.do")
 public class DeleteTodoServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
@@ -19,7 +20,8 @@ public class DeleteTodoServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		todoService.deleteTodo(request.getParameter("todo"));
-		response.sendRedirect("/todo.do");
+		todoService.deleteTodo(new Todo(request.getParameter("todo"), request
+				.getParameter("category")));
+		response.sendRedirect("/list-todo.do");
 	}
 }

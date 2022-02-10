@@ -1,3 +1,7 @@
+/*******************************************************
+ * Class: 			LoginService.java
+ * Purpose:			Used to validate the logging User.
+ *******************************************************/
 package com.oracle.service;
 
 public class LoginService {

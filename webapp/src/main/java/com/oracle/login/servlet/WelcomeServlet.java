@@ -1,3 +1,9 @@
+/*******************************************************
+ * Class: 			WelcomeServlet.java
+ * Purpose:			Welcome Servlet 
+ * Author:			Vivek Kumar
+ *******************************************************/
+
 package com.oracle.login.servlet;
 
 import java.io.IOException;
@@ -20,6 +26,6 @@ public class WelcomeServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/views/welcome/welcome.jsp").forward(request, response);
 	}
 }

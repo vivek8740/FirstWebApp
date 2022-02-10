@@ -1,3 +1,9 @@
+/*******************************************************
+ * Class: 			LogoutServlet.java
+ * Purpose:			LogoutServlet Servlet 
+ * Author:			Vivek Kumar
+ *******************************************************/
+
 package com.oracle.login.servlet;
 
 import java.io.IOException;
@@ -21,7 +27,7 @@ public class LogoutServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 		request.getSession().invalidate();
-		request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/views/login/login.jsp").forward(request, response);
 	}
 
 }

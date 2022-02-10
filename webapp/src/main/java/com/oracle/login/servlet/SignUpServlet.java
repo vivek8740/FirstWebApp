@@ -1,4 +1,11 @@
+/*******************************************************
+ * Class: 			SignUpServlet.java
+ * Purpose:			SignUpServlet Servlet 
+ * Author:			Vivek Kumar
+ *******************************************************/
+
 package com.oracle.login.servlet;
+
 
 import java.io.IOException;
 
@@ -16,7 +23,7 @@ public class SignUpServlet extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		request.getRequestDispatcher("/WEB-INF/views/signup.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/views/signup/signup.jsp").forward(request, response);
 	}
 
 	@Override

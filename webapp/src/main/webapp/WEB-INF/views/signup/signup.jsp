@@ -103,7 +103,7 @@ body {
 </head>
 <body>
 <div class="signup-form">
-    <form action="/todo.do" method="post">
+    <form action="/list-todo.do" method="post">
 		<h2>Register</h2>
 		<p class="hint-text">Create your account. It's free and only takes a minute.</p>
         <div class="form-group">

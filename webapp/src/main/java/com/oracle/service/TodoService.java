@@ -1,3 +1,8 @@
+/*******************************************************
+ * Class: 			TodoService.java
+ * Purpose:			Keep Todo list.
+ * Author:			Vivek Kumar
+ *******************************************************/
 package com.oracle.service;
 
 import java.util.ArrayList;
@@ -7,22 +12,21 @@ import com.oracle.model.Todo;
 
 public class TodoService {
 	private static List<Todo> todos = new ArrayList<Todo>();
-
 	static {
-		todos.add(new Todo("Learn Web Application"));
-		todos.add(new Todo("Learn Spring"));
-		todos.add(new Todo("Learn Spring MVC"));
+		todos.add(new Todo("Learn Web Application Development", "Study"));
+		todos.add(new Todo("Learn Spring MVC", "Study"));
+		todos.add(new Todo("Learn Spring Rest Services", "Study"));
 	}
 
 	public List<Todo> retrieveTodos() {
 		return todos;
 	}
 
-	public void addTodo(String todo) {
-		todos.add(new Todo(todo));
+	public void addTodo(Todo todo) {
+		todos.add(todo);
 	}
 
-	public void deleteTodo(String todo) {
-		todos.remove(new Todo(todo));
+	public void deleteTodo(Todo todo) {
+		todos.remove(todo);
 	}
 }
